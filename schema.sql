@@ -1,5 +1,5 @@
 -- Drops the bamazon_db if it exists currently --
-DROP DATABASE IF EXISTS bamazon_db;
+DROP DATABASE IF EXISTS bamazonDB;
 -- Creates the "animals_db" database --
 CREATE DATABASE bamazonDB;
 
@@ -9,17 +9,14 @@ USE bamazonDB;
 -- Creates the table "products" within bamazon_db --
 CREATE TABLE products (
   -- Makes a string column called "item_id", cannot contain null --
-  name VARCHAR(30) NOT NULL,
+  id INT AUTO_INCREMENT NOT NULL,
     -- Makes a string column called "product_name", cannot contain null --
   name VARCHAR(30) NOT NULL,
     -- Makes a string column called "department_name", cannot contain null --
-  name VARCHAR(30) NOT NULL,
-    -- Makes a string column called "item_id", cannot contain null --
-  name VARCHAR(30) NOT NULL,
-    -- Makes a string column called "item_id", cannot contain null --
-  name VARCHAR(30) NOT NULL,
+  department VARCHAR(30) NOT NULL,
   -- Makes an numeric column called "price" --
   price INTEGER(10),
     -- Makes an numeric column called "stock_quantity" --
-  stock_quantity INTEGER(10)
+  stock_quantity INTEGER(10),
+  PRIMARY KEY (id)
 );
